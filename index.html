@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Employee Tracker</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="master.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+  <script type="text/javascript" src="app.js">
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Employee Tracker</h1>
+      <h3>A Comprehesive Directory of Employee Billable Hours</h3>
+    </div>
+    <div class="box" id="currentEmployees">
+      <div class="boxHeader">
+        Current Employees
+      </div>
+      <div class="boxBody">
+        <table>
+          <thead>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Start Date</th>
+            <th>Months Worked</th>
+            <th>Monthly Pay</th>
+            <th>Total Billed</th>
+          </thead>
+          <tbody id="tableBody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="box" id="addEmployees">
+      <div class="boxHeader">
+        Add Employee
+      </div>
+      <div class="boxBody">
+        <form name="addForm" id="addForm">
+          <label for="empName">Employee Name</label>
+          <input type="text" name="empName" id="empName" class="textInput">
+          <label for="empRole">Role</label>
+          <input type="text" name="empRole" id="empRole" class="textInput">
+          <label for="empStartDate">Start Date</label>
+          <input type="date" name="empStartDate" id="empStartDate" class="textInput">
+          <label for="empRate">Monthly Rate</label>
+          <input type="text" name="empRate" id="empRate" class="textInput">
+          <input id="btnSubmit" type="submit" name="Submit" value="Add Employee">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
